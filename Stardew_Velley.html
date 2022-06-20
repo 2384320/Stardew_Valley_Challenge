@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      #daymission
+      {
+        background: burlywood;
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+        width: 700px;
+      }
+      #start
+      {
+        background: burlywood;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #exp
+      {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+    <script>
+      function change1(color)
+      {
+        var change1 = document.getElementById("change1");
+        change1.style.backgroundColor = color;
+      }
+      function change2(color)
+      {
+        var change2 = document.getElementById("change2");
+        change2.style.backgroundColor = color;
+      }
+      function change3(color)
+      {
+        var change3 = document.getElementById("change3");
+        change3.style.backgroundColor = color;
+      }
+      function change4(color)
+      {
+        var change4 = document.getElementById("change4");
+        change4.style.backgroundColor = color;
+      }
+      function change5(color)
+      {
+        var change5 = document.getElementById("change5");
+        change5.style.backgroundColor = color;
+      }
+      function change6(color)
+      {
+        var change6 = document.getElementById("change6");
+        change6.style.backgroundColor = color;
+      }
+      function change7(color)
+      {
+        var change7 = document.getElementById("change7");
+        change7.style.backgroundColor = color;
+      }
+      function resetForm(color)
+      {
+        document.getElementById("userForm").reset();
+        var resetcolor = document.getElementById("change1");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change2");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change3");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change4");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change5");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change6");
+        resetcolor.style.backgroundColor = "burlywood";
+        var resetcolor = document.getElementById("change7");
+        resetcolor.style.backgroundColor = "burlywood";
+      }
+    </script>
+
+    <script>
+      function cal(){
+        var input = confirm("편하게 연말정산 할 수 있도록 계산기를 만들었습니다. 계산기를 이용하시겠습니까?");
+        if (input != false )
+        {
+          var ancient = prompt('이번 년도에 재배한 고대열매의 개수를 입력하시오.');
+          if (ancient < 0) {alert("정확한 값을 입력해주시기 바랍니다.")}
+          else
+          {
+            if (ancient != null)
+            {
+              var star = prompt('이번 년도에 재배한 스타후르츠의 개수를 입력하시오.');
+              if (star < 0) {alert("정확한 값을 입력해주시기 바랍니다.")}
+              else
+              {
+                if (star != null)
+                {
+                  ancient = parseInt(ancient);
+                  star = parseInt(star);
+
+                  var a_wine = ancient*550*3*1.4;
+                  var s_wine = star*750*3*1.4;
+                  var sum = a_wine + s_wine;
+
+                  alert("이번 년도에는 고대열매 와인과 스타후르츠 와인으로 "
+                  +sum+ "g 만큼의 골드를 벌 수 있습니다.");                  }
+                else
+                {
+                  alert("계산기 사용을 취소합니다.");
+                }
+              }
+            }
+            else
+            {
+              alert("계산기 사용을 취소합니다.");
+            }
+          }
+        }
+        else {
+          alert("계산기 사용을 취소합니다.");
+        }
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $(".html").fadeToggle("slow");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#1").html("<a href='http://stardewvalley.net/'>공식 홈페이지</a>");
+        $("#2").html("<a href='http://stardewvalleywiki.com/'>위키</a>");
+        $("#3").html("<a href='https://namu.wiki/w/Stardew%20Valley'>나무위키</a>");
+        $("#4").html("<a href='http://store.steampowered.com/app/413150/'>스팀</a>");
+        $("#5").html("<a href='http://m.dcinside.com/list.php?id=stardew'>디시인사이드</a>");
+      });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("#hyper").click(function(){
+          alert("많은 링크들 중에서 중요하다고 생각된 링크만 가져왔습니다. 더 많은 링크를 확인하고 싶다면 위키나 나무위키로 들어가서 확인해주세요.");
+        });
+        $("#day").click(function(){
+          alert("되도록이면 일일과제는 완료해주시기 바랍니다.");
+        });
+      $("#html").click(function(){
+        alert("게임정보와는 상관없는 html작성 설명입니다.");
+      });
+    });
+  </script>
+
+  </head>
+
+  <body>
+
+    <h6>20200949</h6>
+
+    <script>
+      var now = new Date();
+      if(now.getHours() >= 7)
+      {
+        if(now.getHours() <= 18)
+        {
+          document.body.style.backgroundColor = "lightgrey";
+        }
+        else
+        {
+          document.body.style.backgroundColor = "grey";
+        }
+      }
+      else
+      {
+        document.body.style.backgroundColor = "grey";
+      }
+      document.write("<h2>"+now.getHours()+"시 "+now.getMinutes()+"분 "+now.getSeconds()+"초</h2>");
+    </script>
+
+    <img id = "start" src="imgs/start_transparency.png" width="700px">
+    <br>
+    <img id = "exp" src="imgs/explanation.png" width="700px">
+
+    <br><hr><br>
+    <h2 id = "hyper">&nbsp;※ 관련 링크</h2>
+    <h5 id = "1">&nbsp;공식 홈페이지</h5>
+    <h5 id = "2">&nbsp;위키</h5>
+    <h5 id = "3">&nbsp;나무위키</h5>
+    <h5 id = "4">&nbsp;스팀</h5>
+    <h5 id = "5">&nbsp;디시인사이드</h5>
+    <br><hr><br>
+
+    <div id="daymission">
+    <form id = 'userForm'>
+      <h1 id ="day">&nbsp;※ 일일과제</h1>
+      <div id="change1">
+        <input type="checkbox" name="check" value = "orange" onclick="change1(this.value)">
+        첫번째 과제: 농작물 물주기 & 재배하기
+      </div><br>
+      <div id="change2">
+        <input type="checkbox" name="check" value = "orange" onclick="change2(this.value)">
+        두번째 과제: 온실 물주기 & 재배하기
+      </div><br>
+      <div id="change3">
+        <input type="checkbox" name="check" value = "orange" onclick="change3(this.value)">
+        세번째 과제: 동물 하트주기 & 자원 수확하기
+      </div><br>
+      <div id="change4">
+        <input type="checkbox" name="check" value = "orange" onclick="change4(this.value)">
+        네번째 과제: 창고에 아이템 가공하기
+      </div><br>
+      <div id="change5">
+        <input type="checkbox" name="check" value = "orange" onclick="change5(this.value)">
+        다섯번째 과제: 저수지에 물고기알 채집하기
+      </div><br>
+      <div id="change6">
+        <input type="checkbox" name="check" value = "orange" onclick="change6(this.value)">
+        여섯번째 과제: 슬라임 우리 확인하기
+      </div><br>
+      <div id="change7">
+        <input type="checkbox" name="check" value = "orange" onclick="change7(this.value)">
+        일곱번째 과제: 버섯 재배하기
+      </div>
+      <p><input type="button" value="리셋하기" value = "burlywood" onclick="resetForm(this.value)"></p>
+      </form>
+    </div>
+
+    <br><br><hr>
+
+    <h1 id = "calculator" onclick="cal()">계산기</h1>
+    <h3>'계산기'를 누르면 간단한 계산기가 실행됩니다.<br>
+    이 계산기는 고대열매 와인과 스타후르츠 와인만 계산됩니다.<br>
+    스킬은 'Artisan Professon' 즉, 판매가 40%상승 적용을 기준으로 합니다.<br>
+    단, 아이템 등급에 관한 확률값은 제외했습니다. 즉, 숙성통에 넣으면 더 많은 이익을 얻을 수 있습니다.<br>
+    직접 값을 입력할 때, 음수를 쓰지 마세요. 재배한 과일이 없다면 무조건 0을 쓰고 확인을 눌러주세요.<br>
+    음수를 사용하거나 도중에 취소를 누르면 계산기가 종료됩니다.
+    </h3>
+
+    <br><br>
+
+    <button>html 설명</button>
+    <div class = "html">
+    <hr>
+    <h2 id = "html">html 설명</h2>
+    <h3>▷ 시간에 따라 배경색이 다르게 나옵니다.</h3>
+    <h4>7시부터 19시까지는 밝은 회색으로 출력되며, 나머지 시간에는 회색으로 출력됩니다.</h4>
+    <h3>▷ 타이틀과 설명사진을 상단에 배치하였습니다.</h3>
+    <h4>둘다 style을 이용해 가운데 정렬했습니다.</h4>
+    <h3>▷ 게임 관련 사이트 링크를 넣었습니다.</h3>
+    <h4>jquery를 사용하여 h5에 있던 텍스트를 조작해 링크로 변경했습니다.</h4>
+    <h3>▷ 일일과제 칸을 배치했습니다.</h3>
+    <h4>성공한 과제 옆에 체크박스를 두어 미션이 잘 보이도록 만들었습니다.<br>
+    박스에 체크를 하면 과제에 해당하는 칸이 다른 색으로 변합니다.<br>
+    하루가 지나가거나 잘못선택 했을경우를 대비해 '리셋하기'버튼을 두었습니다.<br>
+    버튼을 누르면 체크박스의 체크표시와 다른 색으로 변했던 줄이 원래대로 돌아갑니다.</h4>
+    <h3>▷ 간단한 계산기를 배치했습니다.</h3>
+    <h4>시중에 있는 계산기가 아니라 게임 내 골드를 대략적으로 측정할 수 있게 만든 계산기입니다.<br>
+    설명처럼 큰 제목을 누르면 시작합니다.<br>
+    간단하게 만들었다보니 여러모로 조건과 기준이 붙을 수 밖에 없어 후반대의 핵심 작물로만 구성했습니다.</h4>
+    <h3>▷ html 설명을 가릴 수 있는 버튼을 배치했습니다.</h3>
+    <h4>주제에 맞지 않게 html 설명이 들어가 있다고 판단해서<br>
+    jquery를 이용해 버튼에 천천히 사라지게 만드는 명령을 설정했습니다.</h4>
+    <h3>▷ 큰 제목을 누르면 그에 맞는 설명이 나오도록 설정했습니다.</h3>
+    <h4>설명을 너무 주렁주렁 달아놓으면 지저분해보일까봐 글자를 클릭하면<br>
+    그에 대한 설명 혹은 주의점, 알아둘점 등이 나오도록 만들었습니다.</h4>
+
+  </div>
+  </body>
+</html>
